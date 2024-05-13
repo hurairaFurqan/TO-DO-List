@@ -18,6 +18,7 @@ exports.signUp = catchAsync(async (req, res) => {
 
 exports.signIn = catchAsync(async (req, res) => {
     const email = req.body.email;
+    
     const password = req.body.password;
     if (!email && !password) {
         res.json(400).json("email or password missing")
@@ -35,7 +36,7 @@ exports.signIn = catchAsync(async (req, res) => {
             exp: Math.floor(Date.now() / 1000) + 60 * 60,
             iat: Math.floor(Date.now() / 1000),
             id: user._id,
-        }, process.env.SECRET_KEY)
+        }, "login1946")
 
         const person = {
             firstName: user.firstName,

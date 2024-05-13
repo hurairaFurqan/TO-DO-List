@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
 
 // Add Todo
 router.post("/", async (req, res) => {
+    
     const todo = new Todo({
         name: req.body.name,
         author: req.body.author,
@@ -30,6 +31,7 @@ router.post("/", async (req, res) => {
   });
 
     try {
+        console.log(todo);
         const newTodo = await todo.save();
         res.status(201).json(newTodo);
     } catch (err) {

@@ -1,6 +1,6 @@
-export const API_BASEURL_AUTH = "http://localhost:3000/auth"
-export const API_BASEURL_USER = "http://localhost:3000/users"
-export const API_BASEURL_TODO = "http://localhost:3000/api"
+export const API_BASEURL_AUTH = "/auth"
+export const API_BASEURL_USER = "/users"
+export const API_BASEURL_TODO = "/api"
 
 export const setHeaders = () => {
     const headers = {

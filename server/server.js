@@ -44,6 +44,6 @@ app.use("*", (req, res) => {
     res.status(500).json(`Internal Server Error at ${req}`)
 })
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log(`Server is listening at Port ${process.env.PORT}`);
+app.listen(8000, () => {
+    console.log(`Server is listening at Port 8000`);
 })
